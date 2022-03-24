@@ -1,12 +1,15 @@
+pipeline {
+agent any
 stage('parallel') {
   steps {
     parallel(
       a: {
-        echo "Hello Everyone"
+       sh "echo "Hello Everyone""
       },
       b: {
-        echo "Welcome"
+        sh "echo "Welcome""
       }
     )
   }
+}
 }
