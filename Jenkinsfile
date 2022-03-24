@@ -6,12 +6,10 @@ agent any
   steps {
        sh "echo "Hello Everyone""
       }
-        post (
       steps {
         sh "echo "Welcome""
       }
-          )
-        )
+       )
     }
   }
 }
