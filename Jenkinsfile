@@ -6,9 +6,11 @@ agent any
   steps {
        sh "echo "Hello Everyone""
       }
+        stage('build') {
       steps {
         sh "echo "Welcome""
       }
+        }
        )
     }
   }
