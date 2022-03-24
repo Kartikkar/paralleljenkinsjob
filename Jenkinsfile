@@ -1,17 +1,21 @@
 pipeline {
-agent any
-  stages {
-    stage('parallel') {
-    steps {
-     parallel ( 'checkout'
-               {
-       sh "echo "Hello Everyone""
-      }
-               {
-        sh "echo "Welcome""
-      }
-      )
+    agent any
+   stages{
+   stage('test') {
+      steps {
+   parallel {
+        stage('one') {
+           steps{
+            sh echo "good morning"
+            }
+        }
+       stage('two') { 
+           steps{
+          sh echo "devops class" 
+           }
+           }
+       }
     }
-  }
 }
+   }
 }
