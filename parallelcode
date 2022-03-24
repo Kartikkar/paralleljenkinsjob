@@ -1,0 +1,12 @@
+stage('parallel') {
+  steps {
+    parallel(
+      a: {
+        echo "Hello Everyone"
+      },
+      b: {
+        echo "Welcome"
+      }
+    )
+  }
+}
