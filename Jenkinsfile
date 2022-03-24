@@ -1,15 +1,17 @@
 pipeline {
 agent any
   stages {
-  parallel(
     stage('checkout') {
+      parallel (
   steps {
        sh "echo "Hello Everyone""
       }
+        post (
       steps {
         sh "echo "Welcome""
       }
+          )
+        )
     }
-  )
   }
 }
