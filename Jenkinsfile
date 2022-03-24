@@ -7,7 +7,6 @@ agent any
                {
        sh "echo "Hello Everyone""
       }
-       'build'
                {
         sh "echo "Welcome""
       }
