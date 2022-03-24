@@ -4,13 +4,13 @@ pipeline {
    stage('test') {
    parallel {
         stage('one') {
-           step {
-            sh echo "good morning"
+           steps {
+            echo "good morning"
             }
         }
        stage('two') { 
-           step {
-          sh echo "devops class"
+           steps {
+          echo "devops class"
            }
            }
        }
